@@ -1,0 +1,179 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+  --Soft-violet-accent: hsl(277, 64%, 61%);
+
+  /* Neutral */
+
+  --White-main-heading-stats-: hsl(0, 0%, 100%);
+  --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+
+  /* Font */
+
+  --Inter: "Inter", sans-serif;
+  --Lexend-Deca: "Lexend Deca", sans-serif;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background: var(--Very-dark-blue-main-background);
+  color: #fff;
+  font-size: 15px;
+  display: grid;
+  place-content: center;
+}
+
+picture > img {
+  opacity: 0.5;
+}
+
+picture {
+  background-color: var(--Soft-violet-accent);
+}
+
+.container {
+  background: var(--Dark-desaturated-blue-card-background);
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: var(--Inter);
+  width: 17rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+span {
+  color: var(--Soft-violet-accent);
+}
+
+.description {
+  font-family: var(--Inter);
+  color: var(--Slightly-transparent-white-stat-headings);
+  font-size: 1rem;
+  width: 18rem;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+.data {
+  font-family: var(--Inter);
+  text-align: center;
+}
+
+.data p:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.data p:nth-of-type(2) {
+  color: var(--Slightly-transparent-white-stat-headings);
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
+
+.companies,
+.templates,
+.queries {
+  margin-bottom: 1.8rem;
+}
+
+.get-insights,
+.description,
+.data {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 25rem;
+  }
+
+  .flex-content {
+    align-items: flex-start;
+    margin: 3rem;
+    width: 25rem;
+  }
+
+  .get-insights {
+    width: 25rem;
+    font-size: 2rem;
+  }
+
+  .description {
+    width: 23rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .get-insights,
+  .description,
+  .data {
+    text-align: left;
+  }
+
+  .data {
+    display: inline-flex;
+    gap: 3rem;
+  }
+}
